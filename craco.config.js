@@ -1,4 +1,6 @@
-const CracoLessPlugin = require("craco-less");
+const CracoLessPlugin = require('craco-less');
+
+const CSS_MODULE_LOCAL_IDENT_NAME = '[local]___[hash:base64:5]';
 
 module.exports = {
   plugins: [
@@ -7,11 +9,35 @@ module.exports = {
       options: {
         lessLoaderOptions: {
           lessOptions: {
-            modifyVars: { "@primary-color": "#1DA57A" },
+            modifyVars: { '@primary-color': '#1DA57A' },
             javascriptEnabled: true,
           },
+        },
+        cssLoaderOptions: {
+          modules: { localIdentName: CSS_MODULE_LOCAL_IDENT_NAME },
         },
       },
     },
   ],
+  style: {
+    modules: {
+      localIdentName: CSS_MODULE_LOCAL_IDENT_NAME,
+    },
+  },
+  babel: {
+    plugins: [
+      [
+        'babel-plugin-react-css-modules',
+        {
+          generateScopedName: CSS_MODULE_LOCAL_IDENT_NAME,
+          attributeNames: { activeStyleName: 'activeClassName' },
+          filetypes: {
+            '.less': {
+              syntax: 'postcss-less',
+            },
+          },
+        },
+      ],
+    ],
+  },
 };

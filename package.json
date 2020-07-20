@@ -35,6 +35,16 @@
       "prettier/react"
     ]
   },
+  "husky": {
+    "hooks": {
+      "pre-commit": "lint-staged"
+    }
+  },
+  "lint-staged": {
+    "*.ts?(x)": "eslint --fix",
+    "*.less": "stylelint --fix",
+    "*.{js,ts?(x),less,md}": "prettier --write"
+  },
   "browserslist": {
     "production": [
       ">0.2%",
@@ -52,6 +62,8 @@
     "@types/react-router-dom": "^5.1.5",
     "craco-less": "^1.17.0",
     "eslint-config-prettier": "^6.11.0",
+    "husky": "^4.2.5",
+    "lint-staged": "^10.2.11",
     "prettier": "^2.0.5",
     "stylelint": "^13.6.1",
     "stylelint-config-css-modules": "^2.2.0",

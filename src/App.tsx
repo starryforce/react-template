@@ -1,8 +1,8 @@
-import React from "react";
-import { BrowserRouter as Router, Switch, Route, Link } from "react-router-dom";
-import { Button } from "antd";
-import logo from "./logo.svg";
-import "./App.less";
+import React from 'react';
+import { BrowserRouter as Router, Switch, Route, Link } from 'react-router-dom';
+import { Button } from 'antd';
+import logo from './logo.svg';
+import './App.less';
 
 function App() {
   return (
@@ -52,8 +52,7 @@ function App() {
           className="App-link"
           href="https://reactjs.org"
           target="_blank"
-          rel="noopener noreferrer"
-        >
+          rel="noopener noreferrer">
           Learn React
         </a>
         <Button type="primary">Button</Button>

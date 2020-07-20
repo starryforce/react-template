@@ -21,10 +21,19 @@
     "start": "craco start",
     "build": "craco build",
     "test": "craco test",
-    "eject": "react-scripts eject"
+    "eject": "react-scripts eject",
+    "lint": "npm run lint:script && npm run lint:style",
+    "lint:script": "eslint --fix \"src/**/*.{ts,tsx}\" ",
+    "lint:style": "stylelint --cache --fix \"src/**/*.{css,scss,less}\" ",
+    "format": "prettier --write \"src/**/*.{ts,tsx,css,less,scss,json,md}\" "
   },
   "eslintConfig": {
-    "extends": "react-app"
+    "extends": [
+      "react-app",
+      "prettier",
+      "prettier/@typescript-eslint",
+      "prettier/react"
+    ]
   },
   "browserslist": {
     "production": [
@@ -41,6 +50,14 @@
   "devDependencies": {
     "@craco/craco": "^5.6.4",
     "@types/react-router-dom": "^5.1.5",
-    "craco-less": "^1.17.0"
+    "craco-less": "^1.17.0",
+    "eslint-config-prettier": "^6.11.0",
+    "prettier": "^2.0.5",
+    "stylelint": "^13.6.1",
+    "stylelint-config-css-modules": "^2.2.0",
+    "stylelint-config-prettier": "^8.0.2",
+    "stylelint-config-rational-order": "^0.1.2",
+    "stylelint-config-standard": "^20.0.0",
+    "stylelint-order": "^4.1.0"
   }
 }

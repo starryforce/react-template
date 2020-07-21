@@ -1,0 +1,58 @@
+.container {
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+  background: fade(#fff, 60%);
+  border-radius: 5px;
+}
+
+.header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 100%;
+  padding: 16px 16px 0 27px;
+  font-size: 22px;
+}
+.content {
+  display: flex;
+  flex: 1;
+  flex-direction: column;
+  justify-content: space-around;
+  padding: 0 30px 30px 30px;
+  font-size: 18px;
+}
+
+.input-container {
+  display: flex;
+  width: 100%;
+  height: 55px;
+  line-height: 55px;
+  background-color: #fff;
+  border-radius: 25px;
+  .prefix {
+    width: 80px;
+    padding-left: 20px;
+    color: #333;
+  }
+  .suffix {
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+    padding-right: 20px;
+  }
+  .input-box {
+    flex: 1;
+    border: none;
+    outline: none;
+    touch-action: none;
+  }
+}
+
+.error-message {
+  height: 40px;
+  color: #ee3e3e;
+  font-size: 16px;
+  line-height: 40px;
+  text-align: center;
+}

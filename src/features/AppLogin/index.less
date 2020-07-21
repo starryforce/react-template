@@ -1,0 +1,28 @@
+.container {
+  display: grid;
+  grid-template-rows: 36px 16fr 62fr 14fr 8fr;
+  grid-template-columns: 82fr 713fr 402fr 83fr;
+  height: 100vh;
+  background-image: url('../../assets/images/login_bg.png');
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+}
+.header {
+  grid-column-start: 1;
+  grid-column-end: 5;
+  background-color: goldenrod;
+}
+
+.login {
+  grid-row-start: 3;
+  grid-row-end: 4;
+  grid-column-start: 2;
+  grid-column-start: 3;
+}
+.support {
+  grid-row-start: 4;
+  grid-row-end: 5;
+  grid-column-start: 1;
+  grid-column-start: 2;
+}
